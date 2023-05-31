@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+import connectmongo from "../../middleware/db";
 
 const handler = async (req, res) => {
     try {

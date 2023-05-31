@@ -4,14 +4,14 @@ import Link from "next/link";
 import Head from "next/head";
 import { toast } from "react-toastify";
 
-const Orders = () => {
+const Orders = ({setloggedin}) => {
   const router = useRouter();
   const [orders, setorders] = useState([]);
   const [pageorders, setpageorders] = useState([]);
   const [page, setpage] = useState(1);
   const [pagesize, setpagesize] = useState(0);
 
-  useEffect(({setloggedin}) => {
+  useEffect(() => {
     const fetchorders = async () => {
       let a = await fetch(`${process.env.NEXT_PUBLIC_host}/api/orders`, {
         method: "GET",

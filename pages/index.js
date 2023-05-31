@@ -108,5 +108,12 @@ export async function getServerSideProps() {
     mongoose.connect(process.env.mongouri);
   }
   const product = await Product.find();
-  return { props: { data: JSON.parse(JSON.stringify(product)) } };
+  const sliced = Object.keys(product)
+    .slice(0, 8)
+    .reduce((result, key) => {
+      result[key] = product[key];
+
+      return result;
+    }, {});
+  return { props: { data: JSON.parse(JSON.stringify(sliced)) } };
 }
