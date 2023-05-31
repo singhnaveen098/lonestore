@@ -12,4 +12,4 @@ const productschema = new mongoose.Schema({
     availableqty:{type: Number, required: true},
 }, {timestamps: true})
 
-export default mongoose.model("Product", productschema)
+export default mongoose.models.Product || mongoose.model("Product", productschema)
