@@ -21,7 +21,7 @@ const Offers = () => {
           content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
         />
       </Head>
-      offers
+      offer
     </div>
   );
 };
