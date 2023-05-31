@@ -38,7 +38,7 @@ const handler = async (req, res) => {
         <br>
         <p>Resetting your password is easy.</p>
         <p>To reset your password, please follow the link below:</p>
-        <p><a href="http://localhost:3000/forgot?token=${token}">Reset Password</a></p>
+        <p><a href="${process.env.NEXT_PUBLIC_host}/forgot?token=${token}">Reset Password</a></p>
         <p>We recommend that you keep your password secure and not share it with anyone. If you feel your password has been compromised, you can change it by going to My Account Page.</p>
         <br>
         <p>If you did not make this request then please ignore this email.</p>
