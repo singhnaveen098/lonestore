@@ -9,7 +9,7 @@ export default function Home({ data }) {
   return (
     <div>
       <Head>
-        <title>LoneStore.com - Be Lone, Be Sexy</title>
+        <title>LoneStore - Be Lone, Be Sexy</title>
         <meta
           name="description"
           content="LoneStore.com - Be Lone, Be Sexy"
